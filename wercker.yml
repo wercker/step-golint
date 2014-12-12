@@ -1,0 +1,19 @@
+box: wercker/golang
+
+build:
+    steps:
+        - setup-go-workspace@1.0.4
+
+        - script:
+            name: fetch golint
+            code: go get github.com/golang/lint/golint
+
+        - script:
+            name: prepare output
+            code: mv $GOPATH/bin/golint $WERCKER_ROOT/golint
+
+        - script:
+            name: prune
+            code: |
+                rm -rf $WERCKER_ROOT/.git
+                rm $WERCKER_ROOT/.gitignore

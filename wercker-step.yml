@@ -1,0 +1,6 @@
+name: golint
+version: 1.0.0
+description: Step to run golint
+keywords:
+  - golang
+  - golint

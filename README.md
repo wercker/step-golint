@@ -4,8 +4,17 @@
 
 ```yaml
 build:
-    steps:
-        golint
+  steps:
+  - golint
+```
+
+# Exclude files
+
+```yaml
+build:
+  steps:
+  - golint:
+      exclude: "\.pb\.go"
 ```
 
 # License

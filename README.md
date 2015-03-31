@@ -5,7 +5,7 @@
 ```yaml
 build:
     steps:
-        golint
+        - golint
 ```
 
 # License

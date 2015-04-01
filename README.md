@@ -4,8 +4,17 @@
 
 ```yaml
 build:
-    steps:
-        golint
+  steps:
+  - golint
+```
+
+# Exclude files
+
+```yaml
+build:
+  steps:
+  - golint:
+      exclude: "\.pb\.go"
 ```
 
 # License
@@ -13,6 +22,10 @@ build:
 The MIT License (MIT)
 
 # Changelog
+
+## 1.2.0
+
+- Add support for excluding files.
 
 ## 1.1.0
 

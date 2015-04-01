@@ -16,7 +16,7 @@ build:
         - golint
 ```
 
-Using a exclude filter:
+Using an exclude filter:
 
 ```yaml
 build:

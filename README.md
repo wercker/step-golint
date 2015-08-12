@@ -7,6 +7,8 @@
 # Options
 
 - `exclude` (optional) Exclude certain files. Uses `grep -ve` to do the exclude.
+- `threshold_warn` (optional) Number of lints which outputs as warning. default: 5
+- `threshold_fail` (optional) Number of lints to allow. default: 10
 
 # Examples
 

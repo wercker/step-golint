@@ -4,7 +4,7 @@ THRESHOLD_WARN=${WERCKER_GOLINT_THRESHOLD_WARN-5}
 THRESHOLD_FAIL=${WERCKER_GOLINT_THRESHOLD_FAIL-10}
 
 if [ -n "$WERCKER_GOLINT_EXCLUDE" ]; then
-  LINTLINES=$("$WERCKER_STEP_ROOT"/golint ./... | grep -ve "$WERCKER_GOLINT_EXCLUDE" | tee lint_results.txt | wc -l | tr -d " ")
+  LINTLINES=$("$WERCKER_STEP_ROOT"/golint ./... | grep -vE "$WERCKER_GOLINT_EXCLUDE" | tee lint_results.txt | wc -l | tr -d " ")
 else
   LINTLINES=$("$WERCKER_STEP_ROOT"/golint ./... | tee lint_results.txt | wc -l | tr -d " ")
 fi

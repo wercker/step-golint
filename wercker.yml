@@ -1,10 +1,8 @@
-box: wercker/golang
+box: golang
 
 build:
     steps:
         - shellcheck
-
-        - setup-go-workspace@1.0.4
 
         - script:
             name: fetch golint
@@ -19,3 +17,9 @@ build:
             code: |
                 rm -rf $WERCKER_ROOT/.git
                 rm $WERCKER_ROOT/.gitignore
+
+publish:
+  steps:
+    - publish-step:
+        auth_token: $STEPS_AUTH_TOKEN
+        owner: wercker

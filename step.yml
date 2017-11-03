@@ -1,0 +1,10 @@
+name: golint
+version: 1.4.0
+summary: Step to run golint
+tags:
+  - golang
+  - golint
+properties:
+- name: exclude
+  type: string
+  required: false
